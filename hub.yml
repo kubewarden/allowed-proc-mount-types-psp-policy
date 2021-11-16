@@ -1,0 +1,19 @@
+name: psp-allowed-proc-mount-types
+description: 
+homepage: https://github.com/kubewarden/psp-allowed-proc-mount-types
+author:
+  name: Kubewarden devs
+  homepage: https://github.com/kubewarden
+download:
+  # Important: leave the __TAG__ around: this is automatically replaced with the value of the git tag
+  registry: ghcr.io/kubewarden/policies/psp-allowed-proc-mount-types:__TAG__
+  # url is optional
+  url: https://github.com/kubewarden/psp-allowed-proc-mount-types/releases/download/__TAG__/policy.wasm
+keywords:
+  - PSP
+  - Container
+  - Runtime
+resources:
+  - Pod
+mutation: false
+contextAware: false
