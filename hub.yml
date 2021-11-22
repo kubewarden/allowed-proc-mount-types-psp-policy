@@ -1,5 +1,5 @@
 name: psp-allowed-proc-mount-types
-description: 
+description: Replacement for the Kubernetes Pod Security Policy that controls he usage of /proc mount types
 homepage: https://github.com/kubewarden/psp-allowed-proc-mount-types
 author:
   name: Kubewarden devs
