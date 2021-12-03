@@ -27,8 +27,8 @@ jobs:
     runs-on: ubuntu-latest
     needs: test
     env:
-      WASM_BINARY_NAME: psp_allowed_proc_mount_types
-      OCI_TARGET: ghcr.io/kubewarden/policies/psp-allowed-proc-mount-types
+      WASM_BINARY_NAME: allowed_proc_mount_types_psp
+      OCI_TARGET: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp
       METADATA_FILE: metadata.yml
       KWCTL_VERSION: v0.1.9
     steps:
