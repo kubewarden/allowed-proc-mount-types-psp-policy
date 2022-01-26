@@ -17,3 +17,7 @@ test: fmt lint
 .PHONY: clean
 clean:
 	cargo clean
+
+.PHONY: e2e-tests
+e2e-tests:
+	@echo "Dummy target to allow using the reusable github actions to build, test and release policies"
