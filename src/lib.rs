@@ -1,5 +1,5 @@
-extern crate wapc_guest as guest;
 use guest::prelude::*;
+use kubewarden_policy_sdk::wapc_guest as guest;
 
 use k8s_openapi::api::core::v1 as apicore;
 
@@ -30,6 +30,8 @@ fn validate(payload: &[u8]) -> CallResult {
     if !settings.allow_unmasked_proc_mount_type && any_proc_mount_type_unmasked(&pod_spec) {
         return kubewarden::reject_request(
             Some("Pod has at least one container with Unmasked procMount".to_string()),
+            None,
+            None,
             None,
         );
     }
