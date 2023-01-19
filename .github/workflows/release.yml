@@ -26,5 +26,3 @@ jobs:
     with:
       input-wasm: allowed_proc_mount_types_psp
       oci-target: ghcr.io/${{ github.repository_owner }}/policies/allowed-proc-mount-types-psp
-    secrets:
-      workflow-pat: ${{ secrets.WORKFLOW_PAT }}
