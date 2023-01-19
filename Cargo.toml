@@ -1,6 +1,6 @@
 [package]
 name = "allowed-proc-mount-types-psp"
-version = "0.1.3"
+version = "0.1.4"
 authors = ["Rafael Fernández López <ereslibre@ereslibre.es>"]
 edition = "2018"
 
