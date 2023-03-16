@@ -1,5 +1,5 @@
 questions:
-- default: true
+- default: false
   description: >-
     This policy works by defining what proc mount types are allowed in
     containers. They can be empty (defaulted by Kubernetes), `Default` or
