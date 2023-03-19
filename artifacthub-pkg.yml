@@ -4,7 +4,7 @@
 #
 # This config can be saved to its default location with:
 #   kwctl scaffold artifacthub > artifacthub-pkg.yml 
-version: 0.1.6
+version: 0.1.7
 name: allowed-proc-mount-types-psp
 displayName: Allowed proc mount types psp
 createdAt: 2023-03-19T07:15:49.591666Z
