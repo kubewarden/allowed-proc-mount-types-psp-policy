@@ -13,7 +13,7 @@ license: Apache-2.0
 homeURL: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 containersImages:
 - name: policy
-  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.6
+  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
 links:
 - name: policy
   url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.6/policy.wasm
@@ -22,7 +22,7 @@ links:
 install: |
   The policy can be obtained using [`kwctl`](https://github.com/kubewarden/kwctl):
   ```console
-  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.6
+  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
   ```
 maintainers:
 - name: Rafael Fernández López
