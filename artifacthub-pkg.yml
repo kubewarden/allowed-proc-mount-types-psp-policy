@@ -6,7 +6,7 @@
 #   kwctl scaffold artifacthub > artifacthub-pkg.yml 
 version: 0.1.7
 name: allowed-proc-mount-types-psp
-displayName: Allowed proc mount types psp
+displayName: Allowed Proc Mount Types PSP
 createdAt: 2023-03-19T07:15:49.591666Z
 description: Replacement for the Kubernetes Pod Security Policy that controls the usage of /proc mount types
 license: Apache-2.0
