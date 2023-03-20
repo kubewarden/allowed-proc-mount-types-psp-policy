@@ -1,13 +1,14 @@
 SOURCE_FILES := $(shell test -e src/ && find src -type f)
-VERSION := $(shell sed --posix -n 's,^version = \"\(.*\)\",\1,p' Cargo.toml)
+VERSION := $(shell git describe | cut -c2-)
+
 policy.wasm: $(SOURCE_FILES) Cargo.*
 	cargo build --target=wasm32-wasi --release
 	cp target/wasm32-wasi/release/*.wasm policy.wasm
 
 artifacthub-pkg.yml: policy.wasm metadata.yml
-	kwctl scaffold artifacthub --metadata-path metadata.yml --version $(VERSION) \
-		--questions-path questions-ui.yml > artifacthub-pkg.yml.tmp || 	rm -f artifacthub-pkg.yml.tmp
-	mv artifacthub-pkg.yml.tmp artifacthub-pkg.yml
+	kwctl scaffold artifacthub \
+	  --metadata-path metadata.yml --version $(VERSION) \
+	  --questions-path questions-ui.yml --output  artifacthub-pkg.yml
 
 annotated-policy.wasm: policy.wasm metadata.yml
 	kwctl annotate -m metadata.yml -o annotated-policy.wasm policy.wasm

@@ -16,7 +16,7 @@ containersImages:
   image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
 links:
 - name: policy
-  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.6/policy.wasm
+  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.7/policy.wasm
 - name: source
   url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 install: |
@@ -25,8 +25,8 @@ install: |
   kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
   ```
 maintainers:
-- name: Rafael Fernández López
-  email: rfernandezlopez@suse.com
+- name: Kubewarden developers
+  email: cncf-kubewarden-maintainers@lists.cncf.io
 provider:
   name: kubewarden
 recommendations:
