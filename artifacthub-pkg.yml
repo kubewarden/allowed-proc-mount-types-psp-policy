@@ -7,13 +7,17 @@
 version: 0.1.7
 name: allowed-proc-mount-types-psp
 displayName: Allowed Proc Mount Types PSP
-createdAt: 2023-03-19T07:15:49.591666Z
+createdAt: 2023-03-20T18:27:58.039277719Z
 description: Replacement for the Kubernetes Pod Security Policy that controls the usage of /proc mount types
 license: Apache-2.0
 homeURL: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 containersImages:
 - name: policy
   image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
+keywords:
+- psp
+- container
+- runtime
 links:
 - name: policy
   url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.7/policy.wasm
@@ -51,6 +55,7 @@ annotations:
       required: false
       type: boolean
       variable: allow_unmasked_proc_mount_type
+  kubewarden/resources: Pod
   kubewarden/rules: |
     - apiGroups:
       - ''
@@ -70,4 +75,3 @@ annotations:
       - pods/ephemeralcontainers
       operations:
       - UPDATE
-
