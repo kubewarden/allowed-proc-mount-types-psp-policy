@@ -5,7 +5,7 @@ policy.wasm: $(SOURCE_FILES) Cargo.*
 	cargo build --target=wasm32-wasi --release
 	cp target/wasm32-wasi/release/*.wasm policy.wasm
 
-artifacthub-pkg.yml: policy.wasm metadata.yml
+artifacthub-pkg.yml: metadata.yml Cargo.toml
 	kwctl scaffold artifacthub \
 	  --metadata-path metadata.yml --version $(VERSION) \
 	  --questions-path questions-ui.yml --output  artifacthub-pkg.yml
