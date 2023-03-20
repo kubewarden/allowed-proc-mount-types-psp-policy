@@ -1,42 +1,38 @@
----
-version: 0.1.6
+# Kubewarden Artifacthub Package config
+#
+# Use this config to submit the policy to https://artifacthub.io.
+#
+# This config can be saved to its default location with:
+#   kwctl scaffold artifacthub > artifacthub-pkg.yml 
+version: 0.1.7
 name: allowed-proc-mount-types-psp
 displayName: Allowed Proc Mount Types PSP
-createdAt: '2023-03-16T13:06:50+00:00'
-description: Replacement for the Kubernetes Pod Security Policy that controls the
-  usage of /proc mount types
+createdAt: 2023-03-19T07:15:49.591666Z
+description: Replacement for the Kubernetes Pod Security Policy that controls the usage of /proc mount types
 license: Apache-2.0
 homeURL: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 containersImages:
 - name: policy
-  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.6
-keywords:
-- psp
-- container
-- runtime
+  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
 links:
 - name: policy
-  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.6/policy.wasm
+  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.7/policy.wasm
 - name: source
   url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
+install: |
+  The policy can be obtained using [`kwctl`](https://github.com/kubewarden/kwctl):
+  ```console
+  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
+  ```
+maintainers:
+- name: Kubewarden developers
+  email: cncf-kubewarden-maintainers@lists.cncf.io
 provider:
   name: kubewarden
 recommendations:
 - url: https://artifacthub.io/packages/helm/kubewarden/kubewarden-controller
 annotations:
-  kubewarden/resources: Pod
-  kubewarden/mutation: false
-  kubewarden/contextAware: false
-  kubewarden/rules: |
-    rules:
-    - apiGroups: [""]
-      apiVersions: ["v1"]
-      resources: ["pods", "pods/ephemeralcontainers"]
-      operations: ["CREATE"]
-    - apiGroups: [""]
-      apiVersions: ["v1"]
-      resources: ["pods", "pods/ephemeralcontainers"]
-      operations: ["UPDATE"]
+  kubewarden/mutation: 'false'
   kubewarden/questions-ui: |
     questions:
     - default: false
@@ -55,3 +51,23 @@ annotations:
       required: false
       type: boolean
       variable: allow_unmasked_proc_mount_type
+  kubewarden/rules: |
+    - apiGroups:
+      - ''
+      apiVersions:
+      - v1
+      resources:
+      - pods
+      - pods/ephemeralcontainers
+      operations:
+      - CREATE
+    - apiGroups:
+      - ''
+      apiVersions:
+      - v1
+      resources:
+      - pods
+      - pods/ephemeralcontainers
+      operations:
+      - UPDATE
+
