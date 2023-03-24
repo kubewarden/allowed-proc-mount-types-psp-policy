@@ -23,16 +23,3 @@ annotations:
   io.kubewarden.policy.url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
   io.kubewarden.policy.source: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
   io.kubewarden.policy.license: Apache-2.0
-  io.kubewarden.policy.usage: |
-    This policy works by defining what proc mount types are allowed in containers. They can be left
-    empty (defaulted by Kubernetes), `Default` or `Unmasked`. This policy protects against pods that
-    contain at least one container with `Unmasked` proc mount type, that can potentially expose host
-    information to the container.
-
-    The following setting keys are accepted for this policy:
-
-    * `allow_unmasked_proc_mount_type`: allows the containers, init containers or ephemeral containers
-      within a pod to set `.spec.securityContext.procMount` to `Unmasked`. Otherwise, the pod or the
-      ephemeral request subresource request will be rejected.
-
-    `allow_unmasked_proc_mount_type` is `false` by default.
