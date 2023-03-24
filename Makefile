@@ -11,7 +11,7 @@ artifacthub-pkg.yml: metadata.yml Cargo.toml
 	  --questions-path questions-ui.yml --output  artifacthub-pkg.yml
 
 annotated-policy.wasm: policy.wasm metadata.yml
-	kwctl annotate -m metadata.yml -o annotated-policy.wasm policy.wasm
+	kwctl annotate -m metadata.yml -u README.md -o annotated-policy.wasm policy.wasm
 
 .PHONY: fmt
 fmt:
