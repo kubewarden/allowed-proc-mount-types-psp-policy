@@ -4,29 +4,29 @@
 #
 # This config can be saved to its default location with:
 #   kwctl scaffold artifacthub > artifacthub-pkg.yml 
-version: 0.1.7
+version: 0.1.8
 name: allowed-proc-mount-types-psp
 displayName: Allowed Proc Mount Types PSP
-createdAt: 2023-03-20T18:27:58.039277719Z
+createdAt: 2023-03-24T15:57:38.973587225Z
 description: Replacement for the Kubernetes Pod Security Policy that controls the usage of /proc mount types
 license: Apache-2.0
 homeURL: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 containersImages:
 - name: policy
-  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
+  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.8
 keywords:
 - psp
 - container
 - runtime
 links:
 - name: policy
-  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.7/policy.wasm
+  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.8/policy.wasm
 - name: source
   url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 install: |
   The policy can be obtained using [`kwctl`](https://github.com/kubewarden/kwctl):
   ```console
-  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.7
+  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.8
   ```
 maintainers:
 - name: Kubewarden developers
