@@ -131,9 +131,9 @@ checksum = "4217ad341ebadf8d8e724e264f13e593e0648f5b3e94b3896a5df283be015ecc"
 
 [[package]]
 name = "k8s-openapi"
-version = "0.18.0"
+version = "0.19.0"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "cd990069640f9db34b3b0f7a1afc62a05ffaa3be9b66aa3c313f58346df7f788"
+checksum = "95578de7d6eac4fba42114bc751e38c59a739968769df1be56feba6f17fd148e"
 dependencies = [
  "base64",
  "bytes",
@@ -148,9 +148,9 @@ dependencies = [
 
 [[package]]
 name = "kubewarden-policy-sdk"
-version = "0.9.5"
+version = "0.9.7"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "b2b5f89a2e97652ca998205c3aaffbdfcf35feadc37580e06fb77fd7ca5abfbc"
+checksum = "fb4fdd3b3a463c5efeed9a263ed6ba66173f34906527448837845d05365a45e3"
 dependencies = [
  "anyhow",
  "cfg-if",
