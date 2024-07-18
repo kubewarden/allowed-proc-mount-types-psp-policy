@@ -4,33 +4,33 @@
 #
 # This config can be saved to its default location with:
 #   kwctl scaffold artifacthub > artifacthub-pkg.yml 
-version: 0.1.9
+version: 0.1.10
 name: allowed-proc-mount-types-psp
 displayName: Allowed Proc Mount Types PSP
-createdAt: 2023-10-16T08:29:41.923293545Z
+createdAt: 2024-07-17T14:23:02.94346891Z
 description: Replacement for the Kubernetes Pod Security Policy that controls the usage of /proc mount types
 license: Apache-2.0
 homeURL: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 containersImages:
 - name: policy
-  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.9
+  image: ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.10
 keywords:
 - psp
 - container
 - runtime
 links:
 - name: policy
-  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.9/policy.wasm
+  url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy/releases/download/v0.1.10/policy.wasm
 - name: source
   url: https://github.com/kubewarden/allowed-proc-mount-types-psp-policy
 install: |
   The policy can be obtained using [`kwctl`](https://github.com/kubewarden/kwctl):
   ```console
-  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.9
+  kwctl pull ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.10
   ```
   Then, generate the policy manifest and tune it to your liking. For example:
   ```console
-  kwctl scaffold manifest -t ClusterAdmissionPolicy registry://ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.9
+  kwctl scaffold manifest -t ClusterAdmissionPolicy registry://ghcr.io/kubewarden/policies/allowed-proc-mount-types-psp:v0.1.10
   ```
 maintainers:
 - name: Kubewarden developers
@@ -76,6 +76,5 @@ annotations:
       - v1
       resources:
       - pods
-      - pods/ephemeralcontainers
       operations:
       - UPDATE
