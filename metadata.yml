@@ -5,7 +5,6 @@ rules:
       - v1
     resources:
       - pods
-      - pods/ephemeralcontainers
     operations:
       - CREATE
   - apiGroups:
