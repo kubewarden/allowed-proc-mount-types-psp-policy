@@ -7,13 +7,6 @@ rules:
       - pods
     operations:
       - CREATE
-  - apiGroups:
-      - ""
-    apiVersions:
-      - v1
-    resources:
-      - pods
-    operations:
       - UPDATE
 mutating: false
 contextAware: false
