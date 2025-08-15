@@ -13,7 +13,7 @@ dependencies = [
 
 [[package]]
 name = "allowed-proc-mount-types-psp"
-version = "1.0.4"
+version = "1.0.5"
 dependencies = [
  "k8s-openapi",
  "kubewarden-policy-sdk",
